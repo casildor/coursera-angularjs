@@ -24,7 +24,9 @@ function Assignment1Controller($scope, $filter) {
         }
         console.log('nDishes After='+dishes.length);
         console.log('--------------------');
-        if(dishes.length <= 3)
+        if(dishes.length == 0)
+      		$scope.lunchDishesMessage = 'Please enter data first.';
+        else if(dishes.length <= 3)
           $scope.lunchDishesMessage = 'Enjoy!';
         else
           $scope.lunchDishesMessage = 'Too much!';
