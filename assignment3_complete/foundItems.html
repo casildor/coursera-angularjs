@@ -1,0 +1,19 @@
+<table class="table" ng-if="items.length">
+	<tr>
+		<td>Name</td>
+		<td>Short Name</td>
+		<td>Description</td>
+		<td></td>
+	</tr>
+	<tr ng-repeat="item in items">
+		<td>{{item.name}}</td>
+		<td>{{item.short_name}}</td>
+		<td>{{item.description}}</td>
+		<td>
+			<button class="btn btn-default" ng-click="onRemove({index: $index})">Don't Want This One!</button>
+		</td>
+	</tr>
+</table>
+<table class="table alert-cr" ng-if="error">
+	<tr><td>Nothing Found</td></tr>
+</table>
